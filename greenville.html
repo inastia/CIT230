@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>iWeather Greenville: Local Weather Forecast, Radar and News</title>
+        <meta name="author" content="Nastia Bigun">
+    <!-- external style references in the proper cascading order -->
+        <meta name="description" content="iWeather Greenville provides local weather forecasts,
+        weather conditions, precipitation, and high and low temperatures.
+        Be prepared with the most accurate 10-day weather forecast.
+        Browse iWeather latest news and updates for Greenville.">
+    <!-- Google API font reference -->
+        <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+     <!-- normalize useragent/browser defaults -->
+        <link href="styles/normalize.css" rel="stylesheet">
+        <!-- default styles - all views -->
+        <link href="styles/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+  <header>
+    <picture>
+      <a href="index.html"><img class="logoimage" src="images/logo.png" alt="iWeather logo"></a>
+    </picture>
+
+    <div>
+      <h1>iWeather</h1>
+      <div class="subheading">local weather report at your fingertips</div>
+    </div>
+
+	  <button class ="hamburger" onclick="toggleNavMenu()">&#9776;</button>
+  </header>
+
+  <!-- NAVIGATION -->
+<!-- words 'storm center' need to stop wrapping in medium view -->
+  <nav>
+    <ul id="primaryNav" class="hide">
+    	<li><a href="index.html">Home</a></li>
+    	<li><a href="franklin.html">Franklin</a></li>
+    	<li><a href="greenville.html">Greenville</a></li>
+    	<li><a href="springfield.html">Springfield</a></li>
+    	<li><a href="stormcenter.html">Storm Center</a></li>
+    	<li><a href="gallery.html">Gallery</a></li>
+      <li><a href="subscribe.html">Subscribe</a></li>
+    </ul>
+  </nav>
+
+    <!-- CONTENT -->
+  <main>
+    <div id="content">
+      <picture class="mediumView">
+        <source media="(min-width: 37.5em) and (max-width: 64em)" srcset=" images/greenville-medium.jpg">
+        <img src="images/header-img.jpg" alt="header image">
+      </picture>
+
+    <div id="weatherSummary">
+        <h2><span id="place"></span></h2>
+        <h3>Weather Summary</h3>
+
+          <!-- WEATHER SUMMARY -->
+  <section id="summary">
+    <div class="current">
+      <img id="w-icon" src="#" alt="current weather icon">
+		  <span id="weatherString"></span>
+    </div>
+
+    <div class="highlow">
+      <p id="high">High: <span id="highT"></span>&deg;F</p>
+      <p id="low">Low: <span id="lowT">60</span>&deg;F</p>
+    </div>
+
+    <div class="conditions">
+      <p id="prec">Precipitation: <span id="precip"></span></p>
+      <p id="wind">Wind Speed: <span id="windSpeed"></span> mph</p>
+    </div>
+
+    <div class="windchill">
+      <p> Windchill: <span id="windChill"></span>&deg;F</p>
+    </div>
+  </section>
+  </div>
+  </div>
+
+       <!-- TABLE -->
+    <section class="forecast">
+      <table>
+	    <thead>
+    <tr><th colspan="10" id="forecastTen"> 10 Day Forecast</th></tr>
+		 <tr>
+        <th>Day 1</th>
+        <th>Day 2</th>
+        <th>Day 3</th>
+        <th>Day 4</th>
+        <th>Day 5</th>
+        <th>Day 6</th>
+        <th>Day 7</th>
+        <th>Day 8</th>
+        <th>Day 9</th>
+        <th>Day 10</th>
+      </tr>
+		</thead>
+    <tbody>
+      <tr>
+        <td>89&deg;F</td>
+        <td>87&deg;F</td>
+        <td>78&deg;F</td>
+        <td>75&deg;F</td>
+        <td>72&deg;F</td>
+        <td>72&deg;F</td>
+        <td>79&deg;F</td>
+        <td>83&deg;F</td>
+        <td>85&deg;F</td>
+        <td>89&deg;F</td>
+      </tr>
+		</tbody>
+      </table>
+    </section>
+
+		<!-- ARTICLE -->
+
+  <h3>East Still Hot, Midwest Still Wet and Here's Why</h3>
+  <article class="cityArticle">
+
+		<!--Change Article size in medium view-->
+    <p class="town-article">
+      At first glance, the catastrophic floods of the Midwest
+      and the miserable but not-so-unusual heat wave in the East
+      may seem unconnected, remote from each other.
+      But they are part of one gigantic continental weather
+      pattern that shows no sign of breaking up any time soon,
+      though there are hints that it might moderate next week.
+      The floods may owe their extraordinary character,
+      meteorologists say, partly to the delayed impact of
+      two global climatic events of last year: El Nino,
+      the pool of warm water that develops every two to seven
+      years in the eastern Pacific Ocean off South America,
+      setting off a chain reaction that reverberates around
+      the world, and Mount Pinatubo, the volcano in the
+      Philippines that erupted in June 1991, thrusting a
+      cooling haze into the atmosphere.
+  </p>
+
+    <picture class="article-img">
+      <img src="images/greenville-img.jpg" alt="pacific ocean, personal collection">
+    </picture>
+
+	</article>
+
+  </main>
+
+    <!-- FOOTER -->
+
+  <footer>
+    <div id="footerNav">
+       <a href="#">Feedback</a>
+       <a href="#">Careers</a>
+       <a href="#">Full Screen Weather</a>
+       <a href="#">Contact Us</a>
+       <a href="#">Site Map</a>
+    </div>
+
+    <aside>123 Fontannaya St, Franklin, UA, 87515</aside>
+    <p class="footer-bar">&copy;2017 All Rights Reserved | iWeather | <a href="termsofuse-eng.html">Terms of Use</a> |<span id="currentdate">Current Date Placeholder</span></p>
+  </footer>
+
+  <script src="scripts/hamburger.js"></script>
+  <script src="scripts/wu-weatherGreenville.js"></script>
+  <script src="scripts/currentdate.js"></script>
+  <script src="scripts/activeNav.js"></script>
+</body>
+</html>

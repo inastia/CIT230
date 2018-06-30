@@ -1,0 +1,542 @@
+/* small phone view */
+
+* { box-sizing: border-box;}
+
+/*---------BODY----------*/
+body {
+  font-family: "Barlow Condensed", Lora;
+}
+
+/*----------HEADER----------*/
+header {
+  display: flex;
+  width: 100%;
+  flex-flow: row;
+  align-items: center;
+}
+.logoimage {
+  width: 3em;
+  margin: 8px;
+}
+header div {
+  display: flex;
+  flex-direction: column;
+}
+header h1 {
+  margin: 0;
+  font-size: 18px;
+  font-family: Georgia;
+}
+header .subheading {
+  font-size: 14px;
+}
+.hamburger {
+	position: absolute;
+	left: 310px;
+	top: 5px;
+  font-size: 2rem;
+  border: none;
+	}
+
+
+/*---------NAVIGATION-----------*/
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background-color: #a6b4bd;
+  list-style-type: none;
+}
+
+nav ul li a {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+  letter-spacing: 1px;
+  justify-content: center;
+}
+li:hover {
+  background-color: #535d66;
+}
+a:hover {color:white;}
+li.active a{
+  background-color: #8acef3;
+  color: white;
+}
+nav ul.hide {display: none;}
+
+/*----------- HEADER IMG ------------*/
+picture img {
+ width: 100%;
+ height: 100%;
+ display: block;
+}
+
+/*-----------CONTENT------------*/
+
+main figure { margin: 0; width:100%; }
+main figure img {
+   width: 100%;
+   height: auto;
+}
+
+h2 {
+   font-size: 2.4em;
+   margin-bottom: -15px;
+   margin-top: 5px;
+   text-align: center;
+}
+h3 {
+   font-size: 2em;
+   margin-bottom: 10px;
+   margin-top: 10px;
+   text-align: center;
+}
+/*----------- HOME PAGE ------------*/
+
+section#townInfo {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+franklin h3, greenville h3, springfield h3 {
+  font-size: 26px;
+  margin: 3px;
+}
+franklin h4, greenville h4, springfield h4 {
+  margin: 3px;
+  text-align: center;
+}
+
+franklin, greenville, springfield {
+  border: #535d66 solid 2px;
+  border-radius: .8em;
+  margin-bottom: 5px;
+  border-width: 30%;
+}
+franklin p { margin: 3px; font-size: 18px;}
+franklin p ul {margin: 3px;}
+
+greenville p { margin: 3px; font-size: 18px;}
+greenville p ul {margin: 3px;}
+
+springfield p { margin: 3px; font-size: 18px;}
+springfield p ul {margin: 3px;}
+
+
+/*-----------WEATHER SUMMARY------------*/
+
+#summary {
+   display: flex;
+   flex-flow: column;
+   align-items: center;
+   font-size: 24px;
+   border-radius: .8em;
+ 	 border: #a6b4bd solid 1px;
+   margin: 0 10px 0 10px;
+}
+
+.highlow, .conditions {
+	display: flex;
+	flex-direction: row;
+}
+
+#high, #low {margin: 5px;}
+
+#prec, #wind {margin: 5px;}
+
+.windchill {
+ font-family: "Barlow Condensed", Lora;
+}
+.windchill p{margin: 0;}
+
+/*--------FORECAST---------*/
+
+.forecast {
+   display: none;
+}
+
+#forecastTen {
+	font-size: 2em;
+}
+
+table {
+   border-collapse: collapse;
+   width: 100%;
+}
+
+table, td, th {
+   border: 1px solid black;
+}
+
+th, td {
+  height: 50px;
+	background-color: #AFC9C9;
+  text-align: center;
+}
+/*----------ARTICLE----------*/
+.cityArticle {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.town-article {
+	font-size: 18px;
+  text-align: justify;
+	padding: 0 10px 0 10px;
+  margin:0;
+}
+.article-img img {
+	width: 100%;
+	padding: 5px 10px 5px 10px;
+  margin: 0;
+}
+
+
+/*--------WEATHER GRID--------*/
+
+.weather-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  width: 100%;
+  justify-content: center;
+}
+.weather {
+  display: subgrid;
+  text-align: center;
+}
+.weather-info {
+	font-size: 14px;
+  margin-top: 13px;
+}
+.weather-info p {
+  font-size: 1.3em;
+  margin-top: 2px;
+	text-align: center;
+}
+
+/*-------STORM CENTER--------*/
+
+form#report {
+	margin: 1em 3%;
+}
+
+fieldset {
+	border-radius: .8em;
+	margin: 1.5em 0;
+	border: #535d66 solid 1px;
+  font-size: 18px;
+}
+
+legend{
+	margin-left: 6%;
+	padding: .5em;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+label{
+	display: block;
+  margin: 9px;
+}
+
+label span{
+	display: block;
+	color: #000000;
+	padding-top: .9em;
+	padding-bottom: .2em;
+}
+
+.submitButton {
+	-webkit-appearance: none;
+	color: #fff;
+	border: solid 1px #535d66;
+	border-radius: 7px;
+	width: 50%;
+  margin-bottom: 30px;
+	font-size: 1em;
+	padding: .6em;
+	background: rgb(45, 65, 48);
+	box-shadow: 4px 4px 10px #535d66;
+}
+
+label input {
+	font-family: "Barlow Condensed", Lora;
+	color: #535d66;
+	padding: .3em .3em .3em 2em;
+	border: solid 1px #a6b4bd;
+	border-radius: 5px;
+	font-size: 18px;
+	width: 90%;
+	max-width: 500px;
+}
+
+label textarea {
+  font-family: "Barlow Condensed", Lora;
+	color: #535d66;
+  width: 100%;
+  height: 100px;
+}
+
+input[type=radio]{
+  width:auto;
+}
+
+input:focus {
+	box-shadow: 1px 1px 4px rgba(0,0,0,0.5) inset;
+}
+/*---------- THANK YOU PAGE -------------*/
+
+div#thankYou {
+  padding: 20px;
+  margin-bottom: 350px;
+}
+
+/*---------- FOOTER -------------*/
+footer {
+  text-align: center;
+  font-family: Georgia;
+  font-size: 14px;
+	background-color: #a6b4bd;
+}
+#footerNav {
+  display: flex;
+  flex-direction: column;
+	justify-content: space-around;
+}
+#footerNav a {
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+#footerNav a:hover {
+  color: white;
+  background-color: #a6b4bd;
+  }
+footer aside {font-size: 16px;}
+footer>p {
+  padding: 10px;
+  color: white;
+	background-color: #535d66;
+	width: 100%;
+}
+footer>p>a {
+  color:white;
+  text-decoration: none;
+}
+footer>p>a:hover{color: yellow;}
+
+@media only screen and (min-width: 37.5em)
+    and (max-width: 64em) {
+
+/*---------HEADER-----------*/
+.logoimage {
+    width: 5em;
+}
+header h1 {
+		font-size: 28px;
+	}
+header .subheading {
+    font-size: 16px;
+}
+
+/*---------NAVIGATION-----------*/
+    /* hamburger button hidden */
+button { display: none; }
+nav ul.hide {display: flex;}
+nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/*-----------CONTENT------------*/
+main { margin: 0; width:100%; }
+main img { width: 100%; height: auto;}
+
+#content {
+  display: flex;
+}
+picture.mediumView {
+  margin: 10px 10px 10px 0;
+}
+
+/*----------- HOME PAGE ------------*/
+
+section#homePage {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+article {
+  flex-direction: column;
+}
+
+
+/*---------WEATHER SUMMARY--------*/
+
+#content {
+  display: flex;
+  justify-content: space-around;
+}
+#summary {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   border: none;
+}
+#weatherSummary h3 {padding: 10px;}
+img#w-icon {width: 50px;height:50px;}
+img#w-iconG {width: 50px;height:50px;}
+img#w-iconS {width: 50px;height:50px;}
+.conditions {
+  flex-direction: column;
+}
+
+/* shows the 10-day forecast */
+ section.forecast {
+   display: flex;
+   text-align: center;
+   margin-top: 0;
+   margin-bottom: 0;
+ }
+
+  /*---------ARTICLE--------*/
+
+.cityArticle {
+	display: flex;
+	flex-direction: row;
+}
+
+.town-article {
+	width: 60%;
+  text-align: left;
+}
+
+	/*------------FOOTER----------*/
+#footerNav {
+  flex-direction: row;
+}
+#footerNav a {
+  padding: 20px;
+}
+/*----GALLERY GRID-----*/
+.weather-grid {
+    grid-template-columns: 1fr 1fr;
+}
+
+}
+/* large phone view */
+@media only screen and (min-width: 64em) {
+
+/*---------HEADER-----------*/
+.logoimage {
+  width: 5em;
+}
+header h1 {
+	font-size: 34px;
+	}
+header .subheading {
+  font-size: 18px;
+}
+
+/*---------NAVIGATION-----------*/
+
+button {display: none;}
+nav ul.hide {display: flex;}
+nav ul {
+	display: flex;
+	flex-direction: row;
+	}
+
+
+/*-----------CONTENT------------*/
+ body {
+  width: 1080px;
+  margin: auto;
+}
+
+main { margin: 0; width:100%; }
+main img {
+  width: 100%;
+  height: auto;
+}
+/*----------- HOME PAGE ------------*/
+
+section#townInfo {
+  flex-direction: row;
+  justify-content: space-around;
+}
+article {
+  flex-direction: column;
+}
+
+/*---------WEATHER SUMMARY--------*/
+ #summary {
+   flex-direction: row;
+   justify-content: space-around;
+   border: none;
+}
+#weatherSummary h3 {padding: 10px;}
+
+.current {
+  display: flex;
+  flex-direction: column;
+}
+
+img#w-icon {width: 50px;height:50px;}
+img#w-iconG {width: 50px;height:50px;}
+img#w-iconS {width: 50px;height:50px;}
+
+.highlow, .conditions {
+	flex-direction: column;
+}
+
+table {width: 70%; margin: auto;}
+
+ /*---------ARTICLE--------*/
+
+.cityArticle {
+	flex-direction: row;
+	justify-content: center;
+}
+.town-article {
+	width: 40%;
+}
+	/* shows the 10-day forecast */
+ section.forecast {
+  display: flex;
+	margin-top: 10px;
+}
+
+
+/*-----------FOOTER----------*/
+#footerNav {
+  flex-direction: row;
+}
+#footerNav a {
+  padding: 20px;
+}
+
+/*--------WEATHER GRID--------*/
+.weather {
+	display: subgrid;
+}
+.weather:hover {
+	box-shadow: 10px 10px 5px gray;
+	border: 1px solid;
+	}
+.weather-grid {
+  grid-template-columns: 30% 30% 30%;
+	margin-bottom: 20px;
+}
+
+}

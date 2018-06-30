@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>iWeather Subscribe: Local Weather Forecast, Radar and News</title>
+        <meta name="author" content="Nastia Bigun">
+    <!-- external style references in the proper cascading order -->
+        <meta name="description" content="iWeather provides local weather forecasts,
+        weather conditions, precipitation, and high and low temperatures.
+        Be prepared with the most accurate 10-day weather forecast.
+        Subscribe to iWeather latest news and updates for Franklin, Greenville, and Springfield.">
+    <!-- Google API font reference -->
+        <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+     <!-- normalize useragent/browser defaults -->
+        <link href="styles/normalize.css" rel="stylesheet">
+        <!-- default styles - all views -->
+        <link href="styles/main.css" rel="stylesheet">
+		</head>
+
+<body>
+  <!-- HEADER -->
+<header>
+  <picture>
+    <a href="index.html"><img class="logoimage" src="images/logo.png" alt="iWeather logo"></a>
+  </picture>
+
+  <div>
+    <h1>iWeather</h1>
+    <div class="subheading">local weather report at your fingertips</div>
+  </div>
+</header>
+
+ <!-- NAVIGATION -->
+  <nav>
+	 <div>
+    	<button class ="hamburger" onclick="toggleNavMenu()">&#9776;</button>
+	 </div>
+    <ul id ="primaryNav" class="hide">
+    	<li><a href="index.html">Home</a></li>
+    	<li><a href="franklin.html">Franklin</a></li>
+    	<li><a href="greenville.html">Greenville</a></li>
+    	<li><a href="springfield.html">Springfield</a></li>
+    	<li><a href="stormcenter.html">Storm Center</a></li>
+    	<li><a href="gallery.html">Gallery</a></li>
+      <li><a href="subscribe.html">Subscribe</a></li>
+    </ul>
+  </nav>
+
+    <!-- CONTENT -->
+    <main>
+    <picture>
+        <img src="images/header-img.jpg" alt="header image">
+    </picture>
+
+    	<h1>Subscribe here to receive the latest weather updates...</h1>
+
+       <div class="subscribe">
+
+    			<form action="thanks.html" method="post" enctype="multipart/form-data" name="subscribePage" id="subscribe" target="_blank">
+
+    		<fieldset>
+    			<legend><span>Personal Information</span></legend>
+
+    			<label><span>First Name:</span><input name="fullname" type="text" placeholder="First Name" pattern="[a-zA-Z -._]{5,30}" required></label>
+          <label><span>Last Name:</span><input name="fullname" type="text" placeholder="Last Name" pattern="[a-zA-Z -._]{5,30}" required></label>
+    			<label><span>Email:</span><input name="email" type="email" placeholder="Email Address" required></label>
+
+          <label><span>City: </span>
+            <input type="text" list="cityName" name="City" placeholder="City" required>
+            <datalist id="cityName">
+              <option value="Select Your City.." disabled></option>
+              <option value="Franklin"></option>
+              <option value="Greenville"></option>
+              <option value="Springfield"></option>
+          </datalist>
+          </label>
+
+    			<label><span>Phone:</span><input name="phone" type="tel" placeholder="Phone Number" pattern="[0-9]{10,20}"></label>
+
+    		</fieldset>
+
+  			<fieldset>
+    			<legend><span>Other</span></legend>
+    			<label><span>Additional Information: </span>
+    				<textarea name="comment"></textarea>
+    			</label>
+  			</fieldset>
+
+    		<input type="submit" value="Submit" class="submitButton">
+    		<input type="hidden" value="thanks.html" name="redirect">
+
+    </form>
+    </div>	<!-- class report -->
+    </main>
+
+    <!-- FOOTER -->
+   <footer>
+     <div id="footerNav">
+        <a href="#">Feedback</a>
+        <a href="#">Careers</a>
+        <a href="#">Full Screen Weather</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Site Map</a>
+      </div>
+
+     <aside>
+       123 Fontannaya St, Franklin, UA, 87515
+     </aside>
+     <p class="footer-bar">&copy;2017 All Rights Reserved | iWeather | <a href="termsofuse-eng.html">Terms of Use</a> |<span id="currentdate">Current Date Placeholder</span></p>
+   </footer>
+
+   <script src="scripts/hamburger.js"></script>
+   <script src="scripts/activeNav.js"></script>
+   <script src="scripts/currentdate.js"></script>
+   <script src="scripts/severity.js"></script>
+
+ </body>
+ </html>

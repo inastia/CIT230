@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>iWeather Gallery: Local Weather Forecast, Radar and News</title>
+        <meta name="author" content="Nastia Bigun">
+    <!-- external style references in the proper cascading order -->
+        <meta name="description" content="iWeather provides local weather forecasts,
+        weather conditions, precipitation, and high and low temperatures.
+        Be prepared with the most accurate 10-day weather forecast.
+        Browse iWeather latest news and updates. Submit your weather images
+        to be featured on our Gallery page.">
+    <!-- Google API font reference -->
+        <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+     <!-- normalize useragent/browser defaults -->
+        <link href="styles/normalize.css" rel="stylesheet">
+        <!-- default styles - all views -->
+        <link href="styles/main.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+<header>
+  <picture>
+    <a href="index.html"><img class="logoimage" src="images/logo.png" alt="iWeather logo"></a>
+  </picture>
+
+  <div>
+    <h1>iWeather</h1>
+    <div class="subheading">local weather report at your fingertips</div>
+  </div>
+</header>
+
+  <!-- NAVIGATION -->
+  <nav>
+	<div>
+  	<button class ="hamburger" onclick="toggleNavMenu()">&#9776;</button>
+	</div>
+  <ul id="primaryNav" class="hide">
+  	<li><a href="index.html">Home</a></li>
+  	<li><a href="franklin.html">Franklin</a></li>
+  	<li><a href="greenville.html">Greenville</a></li>
+  	<li><a href="springfield.html">Springfield</a></li>
+  	<li><a href="stormcenter.html">Storm Center</a></li>
+  	<li><a href="gallery.html">Gallery</a></li>
+    <li><a href="subscribe.html">Subscribe</a></li>
+  </ul>
+  </nav>
+
+    <!-- CONTENT -->
+<main>
+  <picture>
+    <img src="images/header-img.jpg" alt="header image">
+  </picture>
+  <h1>Gallery</h1>
+	  <!-- Gallery out of boundary of the nav -->
+  <section class="weather-grid">
+
+   <div class="weather">
+     <a href="images/weather_1.jpg" target="_blank"><img class="weather-image" src="images/weather_1.jpg" alt="Lightning" title="Lightning"></a>
+     <div class="weather-info">
+        <h3>Lightning</h3>
+        <p>September, 2001</p>
+      </div>
+	  </div>
+
+    <div class="weather">
+	     <a href="images/weather_2.jpg" target="_blank"><img class="weather-image" src="images/weather_2.jpg" alt="Rainbow" title="Rainbow"></a>
+       <div class="weather-info">
+         <h3>Rainbow</h3>
+         <p>June, 2007</p>
+      </div>
+    </div>
+
+    <div class="weather">
+	     <a href="images/weather_3.jpg" target="_blank"><img class="weather-image" src="images/weather_3.jpg" alt="Rainfall" title="Rainfall"></a>
+       <div class="weather-info">
+         <h3>Rainfall</h3>
+         <p>November, 2011</p>
+      </div>
+    </div>
+
+    <div class="weather">
+	     <a href="images/weather_4.jpg" target="_blank"><img class="weather-image" src="images/weather_4.jpg" alt="Clear Sky" title="Clear Sky"></a>
+       <div class="weather-info">
+         <h3>Clear Sky</h3>
+         <p>March, 1987</p>
+      </div>
+    </div>
+
+    <div class="weather">
+      <a href="images/weather_5.jpg" target="_blank"><img class="weather-image" src="images/weather_5.jpg" alt="Tornado" title="Franklin Tornado"></a>
+      <div class="weather-info">
+        <h3>Franklin Tornado</h3>
+        <p>August, 2009</p>
+    </div>
+  </div>
+
+  <div class="weather">
+    <a href="images/weather_6.jpg" target="_blank"><img class="weather-image" src="images/weather_6.jpg" alt="Sunny Weather" title="Sunny Weather"></a>
+    <div class="weather-info">
+      <h3>Sunny Day</h3>
+      <p>May, 2017</p>
+    </div>
+  </div>
+</section>
+</main>
+
+    <!-- FOOTER -->
+
+  <footer>
+    <div id="footerNav">
+       <a href="#">Feedback</a>
+       <a href="#">Careers</a>
+       <a href="#">Full Screen Weather</a>
+       <a href="#">Contact Us</a>
+       <a href="#">Site Map</a>
+     </div>
+
+    <aside>123 Fontannaya St, Franklin, UA, 87515</aside>
+    <p class="footer-bar">&copy;2017 All Rights Reserved | iWeather | <a href="termsofuse-eng.html">Terms of Use</a> |<span id="currentdate">Current Date Placeholder</span></p>
+  </footer>
+
+  <script src="scripts/hamburger.js"></script>
+  <script src="scripts/currentdate.js"></script>
+  <script src="scripts/activeNav.js"></script>
+</body>
+</html>
